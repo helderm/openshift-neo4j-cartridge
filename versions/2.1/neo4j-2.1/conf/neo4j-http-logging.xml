@@ -23,7 +23,7 @@
   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <file>data/log/http.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-      <fileNamePattern>OPENSHIFT_LOG_DIR/neo4j/http.%d{yyyy-MM-dd_HH}.log</fileNamePattern>
+      <fileNamePattern>OPENSHIFT_LOG_DIRneo4j/http.%d{yyyy-MM-dd_HH}.log</fileNamePattern>
       <maxHistory>30</maxHistory>
     </rollingPolicy>
 
