@@ -6,6 +6,8 @@ set -u
 for dir in logs tmp pid cache dbs env; do
 	mkdir -p $dir
 done
+
+mkdir -p $OPENSHIFT_DATA_DIR/neo4j
  
 cd ${OPENSHIFT_NEO4J_DIR}versions/2.1/neo4j-2.1/conf
 grep -rl 'OPENSHIFT_NEO4J_DB_HOST' ./ | xargs sed -i "s/OPENSHIFT_NEO4J_DB_HOST/${OPENSHIFT_NEO4J_DB_HOST}/g"
