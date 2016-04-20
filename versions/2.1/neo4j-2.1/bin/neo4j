@@ -198,7 +198,6 @@ startit() {
     else
       checkwriteaccess
       echo "WARNING: not changing user"
-      echo "WARNING: daniel"
       "$JAVACMD" -cp "${CLASSPATH}" $JAVA_OPTS  \
         -Dneo4j.home="${NEO4J_HOME}" -Dneo4j.instance="${NEO4J_INSTANCE}" \
         -Dfile.encoding=UTF-8 \
