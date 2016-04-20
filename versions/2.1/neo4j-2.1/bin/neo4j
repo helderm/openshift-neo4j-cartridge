@@ -186,7 +186,9 @@ startit() {
     checkclasspath
     checkandrepairenv
 
-    CONSOLE_LOG="$NEO4J_LOG/console.log"
+    # Changing log dir for Openshift
+    # CONSOLE_LOG="$NEO4J_LOG/console.log"
+    CONSOLE_LOG="$OPENSHIFT_LOG_DIR/neo4j.console.log"
 
     if [ $UID == 0 ] ; then
       su $NEO4J_USER -c "\"$JAVACMD\" -cp '$CLASSPATH' $JAVA_OPTS \
